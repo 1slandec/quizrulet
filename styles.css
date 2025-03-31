@@ -144,6 +144,8 @@
  }
  
  body {
+  margin: 0;
+  height: 100vh;
    /**
      Пригодится в большинстве ситуаций
      (когда, например, нужно будет "прижать" футер к низу сайта)
@@ -235,15 +237,15 @@
 
 
     --border-radius: 20;
-    --border: 1px solid var(--color-light);
+    --border: 1px solid var(--color-grey);
 
     --font-family-base: 'Inter', sans-serif;
     --font-gidole: 'Gidole', sans-serif;
     --container-width: 1300px;
-    --container-padding-x: 15px;
+    /* --container-padding-x: 15px; */
 
     --transition-duration: 0.2s;
-
+    --leftblockmargin: 325px;
 } 
 
 body {
@@ -253,6 +255,7 @@ body {
     font-size: 16px;
     line-height: 1.75;  
     background-color: var(--color-dark-grey);
+    margin: 0;
 }
 
 a,
@@ -271,39 +274,23 @@ a:hover{
     color: var(--color-light-grey);
 }
 
-.container {
-    max-width: calc(var(--container-width) + var(--container-padding-x)*2);
-    margin-inline: auto;
-    padding-inline: var(--container-padding-x);
-
-}
 
 h1, h2, h3, h4, h5, h5{
-    font-weight: 700;
-    text-transform: uppercase;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 20px;
-}
-
-
-.header-menu-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    /* font-family: var(--font-gidole); */
-    font-weight: 500;
-    font-size: 50px;
-    
-    position: absolute;
-    top: 11px;
-    left: 38px;
-    /* -webkit-text-stroke: 1.5px #000000; */
-}
+.header-link {
+  position: static;
+  display: inline-flex;
+  /* font-family: var(--font-gidole); */
+  font-weight: 500;
+  font-size: 50px;
+  text-decoration: none;
+  top: 11px;
+  left: 38px;
+  /* -webkit-text-stroke: 1px #000000; */
+} 
 
 .green-text {
   color: var(--color-green);
@@ -313,20 +300,40 @@ h1, h2, h3, h4, h5, h5{
   color: var(--color-light-grey);
 }
 
-/* .header-menu-link.is-current::after{
-    content: "";
-    width: 5px;
-    height: 5px;
-    background-color: currentColor;
-    border-radius: 50%;
-
-} */
-
-.vertical-line {
-  position: relative;
-  left: 350px;
-  width: 1px;
+.left-block {
+  position: absolute;
+  display: flex;
+  width: var(--leftblockmargin);
+  box-sizing: border-box;
   top: 0;
   bottom: 0;
-  background-color: var(--color-light-grey);
+  border-right: 2px solid var(--color-grey);
+  justify-content: center;
 }
+
+.container {
+    /* max-width: calc(var(--container-width) + var(--container-padding-x)*2); */
+    display: flex;
+    /* margin-inline: auto; */
+    /* padding-inline: var(--container-padding-x); */
+    margin-left: var(--leftblockmargin);
+    height: calc(100vh);
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.top-block{
+  
+  border-bottom: 2px solid var(--color-grey);
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100px;
+}
+
+.bottom-block {
+  
+  padding: 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
