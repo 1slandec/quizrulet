@@ -281,13 +281,13 @@ h1, h2, h3, h4, h5, h5{
 }
 
 .header-link {
-  position: static;
   display: inline-flex;
   /* font-family: var(--font-gidole); */
   font-weight: 500;
   font-size: 50px;
   text-decoration: none;
   top: 11px;
+  justify-content: center;
   left: 38px;
   /* -webkit-text-stroke: 1px #000000; */
 } 
@@ -428,6 +428,7 @@ h1, h2, h3, h4, h5, h5{
   padding: 15px;
   justify-content: center;
   align-items: center;
+  width: 447px;
 }
 
 .module-learned-txt{
@@ -441,10 +442,58 @@ h1, h2, h3, h4, h5, h5{
   position: absolute;
   display: inline;
   font-size: 20px;
-  
   padding-left: 10px; 
 }
 
 .module-learned-bar {
-  display: inline;
+  display: inline-block;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
+}
+
+ .menu-button{
+  position: absolute;
+  right: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width:30px;
+  height: 76px;
+  
+} 
+
+.menu-button:hover {
+  background: var(--color-grey);
+  border-radius: 20px;
+}
+
+.dropdown-menu{
+  position: absolute;
+  visibility: hidden;
+  padding-right: 10px;
+  padding-left:10px;
+  text-decoration: none;
+  right:0;
+  opacity: 0;
+  background: var(--color-dark-grey);
+  border: 1px solid var(--color-grey);
+  border-radius: 8px;
+  transform: translateY(-10px);
+  transition: all var(--transition-duration) ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container:focus-within .dropdown-menu,
+.menu-button:focus + .dropdown-menu {
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  text-decoration: none;
+}
+
+.menu-item{
+  text-decoration: none;
 }
