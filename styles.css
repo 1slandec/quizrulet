@@ -177,24 +177,24 @@
    (за исключением тех, у которых уже указан
    атрибут fill со значением 'none' или начинается с 'url')
   */
- :where([fill]:not(
+ /* :where([fill]:not(
    [fill="none"],
    [fill^="url"]
  )) {
    fill: currentColor;
- }
+ } */
  
  /**
    Приводим к единому цвету svg-элементы
    (за исключением тех, у которых уже указан
    атрибут stroke со значением 'none')
   */
- :where([stroke]:not(
+ /* :where([stroke]:not(
    [stroke="none"],
    [stroke^="url"]
  )) {
    stroke: currentColor;
- }
+ } */
  
  /**
    Чиним баг задержки смены цвета при взаимодействии с svg-элементами
@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h5{
   box-sizing: border-box;
   top: 0;
   bottom: 0;
-  border-right: 2px solid var(--color-grey);
+  border-right: 2px solid var(--color-light-grey);
   justify-content: center;
 }
 
@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h5{
 
 .top-block{
   
-  border-bottom: 2px solid var(--color-grey);
+  border-bottom: 2px solid var(--color-light-grey);
   padding: 20px;
   box-sizing: border-box;
   height: 100px;
@@ -342,9 +342,9 @@ h1, h2, h3, h4, h5, h5{
   /* width: 175px; */
   height: 60px;
   padding: 10px;
-  background: var(--color-light-grey);
-  border-radius: 40px;
-
+  background: var(--color-dark-grey);
+  border-radius: 20px;
+  border: 2px solid var(--color-grey);
 }
 
 .search-btn {
@@ -361,21 +361,90 @@ h1, h2, h3, h4, h5, h5{
   text-decoration: none;
 
 }
-.top-search:hover > .search-txt
+/* .search-box:hover > .search-txt
 {
   width: 240px;
   padding: 0 6px;
-}
+} */
 
 .search-txt {
   border: none;
   background: none;
   outline: none;
   float: left;
-  padding-right: 10px;
-  color: var(--color-dark-grey);
+  padding: 10px;
+  color: var(--color-light-grey);
   font-size: 18px;
   transition: var(--transition-duration);
   line-height: 40px;
   width: 175px;
+}
+
+.create-module-btn {
+  display: inline-flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  right: 20px;
+  height: 60px;
+  border-radius: 20px;
+  border: 2px solid var(--color-grey);
+  padding: 10px
+}
+
+.create-btn {
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+  width: 37px;
+  
+}
+
+.create-txt{
+  padding-left: 10px;
+  color: var(--color-light-grey);
+  font-size: 18px;
+}
+
+.module {
+  padding: 15px;
+  border-bottom: 3px solid var(--color-grey);
+}
+
+.module-name {
+  padding: 15px;
+  padding-left: 11px;
+  text-decoration: none;
+  color: var(--color-light-grey);
+  font-size: 40px;
+  
+}
+
+.module-learned {
+  position: absolute;
+  right: 300px;
+  display: inline;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.module-learned-txt{
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.module-learned-percent {
+  position: absolute;
+  display: inline;
+  font-size: 20px;
+  
+  padding-left: 10px; 
+}
+
+.module-learned-bar {
+  display: inline;
 }
