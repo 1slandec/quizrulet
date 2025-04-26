@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="site icon"
     type="png"
@@ -13,14 +15,23 @@
 
 </head>
 <body>
-    <div class="login">
+    <div class="quizrulet">
+        <span class="green-text">Quiz</span>
+        <span class="grey-text">RuLet</span>
+    </div>
+    <div class="authorize">
         <form>
             <h1>Авторизация</h1>
-            <label>Логин:</label>
-            <input type="text">
-            <label>Пароль</label>
-            <input type="password">
+            <div class="login">    
+                <label>Логин:</label> <input type="text">
+            </div>
+            <div class="password">
+                <label>Пароль:</label> <input type="password">
+            </div>
             <button>Войти</button>
+            <a class="register" href="/">
+                У вас нет аккаунта? Зарегистрироваться
+            </a>
         </form>
     </div>
 </body>
