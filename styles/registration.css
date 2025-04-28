@@ -6,7 +6,7 @@ body{
     font-size: 16px;
     line-height: 1.75;  
 }
-.authorize {
+.register {
     border: 5px solid var(--color-green);
     width: 50%;
     height: 50%;
@@ -55,6 +55,13 @@ label {
     padding-bottom: 10px;
 }
 
+.pass_again {
+   width: 40%;
+   display: flex;
+   justify-content: right;
+   height: 40px; 
+}
+
 input {
     height: 80%;
     border: 2px solid var(--color-dark);
@@ -68,7 +75,7 @@ button {
     border-radius: 10px;
     border-width: 0;
     height: 50px;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .quizrulet {
@@ -85,10 +92,7 @@ button {
     line-height: 40px;
 }
 
-.register {
-    padding-top: 20px;
-    color: #ACA8A8;
-}
+
 
 h1 {
     text-transform: none;
