@@ -1,100 +1,74 @@
-body{
-    background-color: #716F6F;
-    font-family: var(--font-family-base);
-    
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.75;  
-}
-.register {
-    border: 5px solid var(--color-green);
-    width: 50%;
-    height: 50%;
-    border-radius: 50px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--color-dark-grey);
-}
-
-form {
-    padding: 40px;
-    width: 100%;
-    height: 100%;
+/* Стили для страницы регистрации */
+body {
+    background-color: #383636;
+    color: #ACA8A8;
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
-    display: flex;
-    gap: 5px;
     align-items: center;
-    align-content: space-around;
     justify-content: center;
-    
+    font-family: 'Inter', sans-serif; /* Убедитесь, что шрифт загружен */
 }
 
-label {
-    color: var(--color-light-gray);
-    height: 40px;
-    line-height: 40px;
-    font-size: 28px;
-    border-radius: var(--border-radius);
+/* Стилизация карточки формы */
+.card {
+    background-color: #383636;
+    border: 3px solid #5ee152;
+    border-radius: 1.5rem;
+    color: #ACA8A8;
 }
 
-.login {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px
-}
-
-.password{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.pass_again {
-   width: 40%;
-   display: flex;
-   justify-content: right;
-   height: 40px; 
-}
-
-input {
-    height: 80%;
-    border: 2px solid var(--color-dark);
-    border-radius: 10px;
-}
-
-button {
-    width: 30%;
-    background-color: black;
+/* Стилизация полей ввода */
+.form-control {
+    background-color: #716F6F;
+    border: 1px solid #000000;
     color: #ffffff;
-    border-radius: 10px;
-    border-width: 0;
-    height: 50px;
-    margin-top: 3%;
 }
 
-.quizrulet {
-    display: flex;
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    line-height: normal;
-    background-color: var(--color-dark-grey);
-    border-radius: 20px;
-    padding: 10px;
-    line-height: 40px;
+/* Стилизация полей ввода при фокусе */
+.form-control:focus {
+    background-color: #716F6F;
+    border-color: #5ee152;
+    box-shadow: 0 0 0 0.25rem rgba(94, 225, 82, 0.25);
+    color: #ffffff;
 }
 
+/* Стилизация меток полей */
+.form-label {
+    color: #ACA8A8;
+}
 
+/* Стилизация кнопки регистрации */
+.btn-custom-register {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+}
 
-h1 {
-    text-transform: none;
+/* Стилизация кнопки регистрации при наведении */
+.btn-custom-register:hover {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+/* Стилизация логотипа */
+.quizrulet-brand {
+    font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* Цвета текста в логотипе */
+.quizrulet-brand .text-success { color: #5ee152 !important; }
+.quizrulet-brand .text-secondary { color: #ACA8A8 !important; }
+
+/* Стилизация ссылки на вход */
+.login-link a {
+    color: #ACA8A8;
+    text-decoration: none;
+}
+
+/* Стилизация ссылки на вход при наведении */
+.login-link a:hover {
+    color: #ffffff;
 }
