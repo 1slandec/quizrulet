@@ -61,3 +61,31 @@
 .card-txt::placeholder{
     color: white;
 }
+
+
+
+.btn-learn,
+.btn-import{
+    background-color: #5ee152;
+    color: black;
+    font-size: 18px;
+}
+
+
+
+.btn-learn:hover,
+.btn-import:hover{
+    background-color: darkgreen;
+    color: black;
+}
+
+
+.module-name{
+    font-size: 26px;
+}
+
+.tooltip-inner {
+  max-width: 300px;
+  white-space: normal;
+  color: white;
+}
