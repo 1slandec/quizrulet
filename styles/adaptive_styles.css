@@ -1,0 +1,164 @@
+/* Дополнительные стили для улучшения адаптивности */
+@media (max-width: 767.98px) {
+    /* Улучшение навигации для мобильных устройств */
+    #sidebarMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1050;
+        background-color: var(--bs-body-bg);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #sidebarMenu.show {
+        transform: translateX(0);
+    }
+    
+    /* Кнопка-гамбургер для открытия и закрытия меню */
+    .navbar-toggler {
+        display: block;
+        margin-right: 1rem;
+    }
+    
+    /* Основной контент */
+    main {
+        width: 100%;
+        padding-left: 0 !important;
+    }
+    
+    /* Верхняя панель */
+    .top-bar {
+        padding: 1rem;
+    }
+    
+    /* Форма поиска */
+    .search-form {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Кнопка создания модуля */
+    .btn-create {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Карточки модулей */
+    .module-card {
+        padding: 1rem;
+    }
+    
+    .module-title {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .module-info {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+    
+    .module-actions {
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    
+    /* Модальное окно */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+    
+    /* Блок справки закреплен внизу экрана на мобильных */
+    .help {
+        margin-top: auto;
+        padding: 1rem;
+        border-top: 1px solid var(--bs-border-color);
+        background-color: rgba(56, 54, 54, 0.95);
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    main {
+        padding-left: 200px;
+    }
+    
+    .module-info {
+        flex-wrap: wrap;
+    }
+}
+
+/* Общие улучшения для всех устройств */
+.navbar-mobile {
+    display: none;
+    background-color: var(--bs-body-bg);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+@media (max-width: 767.98px) {
+    .navbar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .quizrulet-brand-mobile {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    .quizrulet-brand-mobile .text-success { 
+        color: #5ee152 !important; 
+    }
+    
+    .quizrulet-brand-mobile .text-secondary { 
+        color: #ACA8A8 !important; 
+    }
+}
+
+/* Улучшение доступности для сенсорных устройств */
+@media (hover: none) {
+    .btn, .nav-link, .dropdown-item {
+        padding: 0.75rem 1rem; /* Увеличиваем область нажатия */
+    }
+    
+    .btn-menu {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Стили для бургер-кнопки внутри сайдбара */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.sidebar .navbar-toggler {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
