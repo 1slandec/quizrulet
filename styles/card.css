@@ -69,3 +69,7 @@
     transform: rotateY(180deg);
     background-color: #444;
 }
+
+.button-grey {
+    cursor: pointer;
+}
