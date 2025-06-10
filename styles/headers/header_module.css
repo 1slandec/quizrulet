@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    transition: all .3s;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #383636;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #383636;
+    border-bottom: 2px solid #D9D9D9;
+    justify-content: space-between;
+    padding: 1rem, 3rem;
+}
+
+@media (min-width: 800px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    border-color: black;
+    border-width: 1px;
+}
+.quiz {
+    color: #5EE152;
+}
+
+.rulet{
+    color: #ACA8A8;
+}
