@@ -3,10 +3,10 @@ document.getElementById("moduleForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("moduleName").value.trim();
-    const cards = document.getElementById("cardCount").value;
+    
     const progress = 0
 
-    if (!name || cards < 0 ) return;
+    if (!name) return;
 
     const container = document.querySelector(".module-list");
 
@@ -16,7 +16,7 @@ document.getElementById("moduleForm").addEventListener("submit", function (e) {
             <a class="module-name-link" href="module.html">${name}</a>
         </div>
         <div class="module-info d-flex align-items-center mb-2 mb-md-0 me-md-3">
-            <span class="me-3">Карточек: ${cards}</span>
+            <span class="me-3">Карточек: 0</span>
             <div class="progress me-2" style="width: 100px;">
                 <div class="progress-bar" role="progressbar" style="width: ${progress}%;" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
