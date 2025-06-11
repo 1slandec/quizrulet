@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Просмотр модуля - QuizRuLet</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/fonts.css">
+    <!-- <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/module_edit.css">
+    <link rel="stylesheet" href="./styles/module_edit.css"> -->
+    <link rel="stylesheet" href="./styles/headers/header_module_edit.css">
     <link rel="site icon"
     type="png"
     href="./images/images.png"
@@ -16,16 +16,79 @@
 </head>
 <body>
     <object type="image/svg+xml" data="./icons/sprite.svg" aria-hidden="true" style="display: none;"></object>
-    <div class="container-fluid">
+
+<!-- Header start -->
+<header>
+    <header class="header">
+        <a href="#" class="logo"> 
+            <span class="quiz">Quiz</span><span class="rulet">Rulet</span>
+        </a>
+
+        <div class="central-container">
+            <h1 class="module-title placeholder" id="moduleTitle">
+                Учебный модуль
+            </h1>
+        </div>
+
+        <nav class="nav">
+            <button class="nav-toggle" type="button" aria-label="Меню">
+            <svg>
+                <use href="./icons/sprite.svg#IconBurgerMenu" />
+            </svg>
+            </button>
+
+            <ul class="nav-list">
+
+            <li class="nav-item-learn-and-import">
+                <a href="#">
+                <svg>
+                    <use href="./icons/sprite.svg#IconManualImport" />
+                </svg>
+                </a>
+            </li>
+
+            <li class="nav-item-ai-import">
+                <a href="#">
+                <svg>
+                    <use href="./icons/sprite.svg#IconAIImport" />
+                </svg>
+                </a>
+            </li>
+
+            <li class="nav-item-learn-and-import">
+                <a href="#">
+                <svg>
+                    <use href="./icons/sprite.svg#IconLearn" />
+                </svg>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#">
+                <svg>
+                    <use href="./icons/sprite.svg#IconMainMenu"/>
+                </svg>
+                </a>
+            </li>
+
+            </ul>
+        </nav>
+    </header>
+</header>
+<!-- Header end -->
+
+<!-- Main start -->
+<!-- <main>
+<div class="container-fluid">
     <div class="row">
-        <nav id="sidebarMenu" class="d-md-flex flex-column col-lg-2 sidebar collapse">  <!--левый блок1-->
-            <div class="position-sticky ">
+        <nav id="sidebarMenu" class="d-md-flex flex-column col-lg-2 sidebar collapse">  левый блок1 -->
+            <!-- <div class="position-sticky ">
                 <a class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3" href="/">
                     <span class="text-success">Quiz</span><span class="text-secondary">RuLet</span>
                 </a>
-                <div class="sidebarList">
+                <div class="sidebarList"> -->
 
-                    <ul class="nav flex-column">
+                    <!-- <ul class="nav flex-column">
                         <li class="card m-2">
                             <div class="card-body">
                                 123123
@@ -66,43 +129,43 @@
                 </a>
             </div>
             
-        </nav>
+        </nav> -->
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100"> <!--правый блок-->
-            <div class="top-bar d-flex justify-content-between align-items-center flex-wrap"> <!--верхний блок-->
+        <!-- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100"> <!--правый блок-->
+            <!-- <div class="top-bar d-flex justify-content-between align-items-center flex-wrap"> <!--верхний блок-->
                 
                 
-                <div class="module-name" data-bs-toggle="tooltip" data-bs-placement="top" title="Это описание учебного модуля. Здесь может быть несколько строк текста. Например, вы можете указать темы, которые он охватывает, уровень сложности, количество карточек и другую полезную информацию.">
+                <!-- <div class="module-name" data-bs-toggle="tooltip" data-bs-placement="top" title="Это описание учебного модуля. Здесь может быть несколько строк текста. Например, вы можете указать темы, которые он охватывает, уровень сложности, количество карточек и другую полезную информацию.">
                     Название учебного модуля
-                </div>
+                </div> 
                     
-                <div class="buttons gx-4">
-                    <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > <!--ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ-->
-                        <svg class = "me-2" width="30" height="30" viewBox="0 0 41 37" fill="none" >
+                <div class="buttons gx-4"> -->
+                    <!-- <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ -->
+                        <!-- <svg class = "me-2" width="30" height="30" viewBox="0 0 41 37" fill="none" >
                             <use href="./icons/sprite.svg#HandImport" />
-                        </svg>
+                        </svg> -->
 
 
-                        Импорт    
+                        <!-- Импорт    
                     </a>
-                    <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > <!--ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ-->
-                        <svg class = "me-2" width="30" height="30" viewBox="0 0 45 37" fill="none">
+                    <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ -->
+                        <!-- <svg class = "me-2" width="30" height="30" viewBox="0 0 45 37" fill="none">
                             <use href="./icons/sprite.svg#AIImport" />
                         </svg>
 
                         AI-импорт    
                     </a>
                     <a class="btn btn-learn d-inline-flex align-items-center justify-content-between" href="#" > <!--ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ-->
-                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+                        <!-- <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none">
                             <use href="./icons/sprite.svg#IconLearn" />
                         </svg>
-                        Учить    
-                    </a>
+                        Учить  -->
+                    <!-- </a>
                 </div>
             </div>
 
             <div class="card-show pt-3 pb-2 mb-3 gx-4 row min-vh-100"> <!--нижний блок-->
-                <div class = "card-termin col-6 pr-2 pe-md-3">
+                <!-- <div class = "card-termin col-6 pr-2 pe-md-3">
                     <textarea class = "card-txt" rows = 10 type = "form-control" placeholder="Введите термин"></textarea>
                 </div>
                 <div class = "card-meaning col-6 pl-2 ps-md-3">
@@ -112,12 +175,31 @@
         </main>
     </div>
 </div>
+</main> --> 
+<!-- Main end -->
+
+<!-- Footer start -->
+<footer>
+
+</footer>
+<!-- Footer end -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
+</script>
+<script>
+  function updateMainMargin() {
+    const header = document.querySelector('.header');
+    const main = document.querySelector('.main');
+    main.style.marginTop = `${header.offsetHeight}px`;
+  }
+
+  window.onload = updateMainMargin;
+  window.addEventListener('resize', updateMainMargin);
 </script>
 </body>
 </html>

@@ -19,40 +19,101 @@ body{
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #383636;
-    border-bottom: 2px solid #D9D9D9;
-    justify-content: space-between;
-    padding: 1rem, 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #383636;
+  border-bottom: 2px solid #D9D9D9;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1000;
+  gap: 0.3rem;
 }
 
-@media (min-width: 800px){
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.logo{
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    padding-left: 3rem;
-    border-color: black;
-    border-width: 1px;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
 }
+
 .quiz {
-    color: #5EE152;
+  color: #5EE152;
 }
 
-.rulet{
-    color: #ACA8A8;
+.rulet {
+  color: #ACA8A8;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #ACA8A8;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item svg{
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.nav-item:hover {
+  background-color: #716F6F;
+}
+
+/* === Заголовок модуля — вторая строка === */
+.module-title-container {
+  width: 100%;
+  text-align: center;
+}
+
+.module-title {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: center;
+  line-height: 1.5rem;
+  display: block;
+  text-align: center;
+}
+
+.module-title.placeholder {
+  color: white;
+  font-family: 'Inter', sans-serif;
 }

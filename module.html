@@ -1,50 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Модуль Название - QuizRuLet</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/419f67953a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/module.css"> -->
-    <link rel="stylesheet" href="./styles/headers/header_module.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модуль Название - QuizRuLet</title>
+
+  <!-- Шрифт Inter -->
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="./styles/headers/header_module.css">
+  <link rel="stylesheet" href="./styles/mains/main_module.css">
+  <!-- Скрипты -->
+  <script src="scripts/headers_scripts/header_module.js"></script>
 </head>
-
+<!-- Добавить ссылки в header -->
 <body>
-<!-- header start -->
+  <div class="app-container">
+    <!-- header start -->
     <header class="header">
-        <a href="#" class="logo">
-            <span class="quiz">Quiz</span><span class="rulet">Rulet</span>
+      <div class="header-top">
+        <a href="#" class="logo"> 
+          <span class="quiz">Quiz</span><span class="rulet">Rulet</span>
         </a>
-        <div class="central-container">
-            <h1 class="module-title<?= empty($ModuleNameFromDB) ? ' placeholder' : '' ?>">
-            </h1>
-        </div>
-  <!-- <div class="header-container">
-    <nav class="nav">
-      <button class="nav-toggle" type="button">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#">Home</a></li>
-      </ul>
-    </nav>
-    <div class="search">
-      <button class="search-toggle">
-        <i class="fa-solid fa-magifying-glass>"></i>
-      </button>
-      <form action="" class="search-form">
-        <label for="search"></label>
-        <input type="search" id="search" placeholder="Search.." autocomplete="off">
-      </form>
-    </div>
-  </div> -->
-    
- </header>
-<!-- header end -->
+        <!-- Кнопки справа -->
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#">
+                <svg>
+                  <use href="./icons/sprite.svg#IconModuleEdit" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <svg>
+                  <use href="./icons/sprite.svg#IconMainMenu"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Вторая строка: Название модуля по центру -->
+      <div class="module-title-container">
+        <h1 class="module-title placeholder" id="moduleTitle">
+          Учебный модуль
+        </h1>
+      </div>
+    </header>
+    <!-- header end -->
 
+    <!-- main start -->
+    <main class="main">
+      <div class="left-column">
+        <div class="left-column-container">
+          <button class="learn-button">
+          <svg class="rocket-icon">
+            <use href="./icons/sprite.svg#IconRocket" />
+          </svg>
+          <span class="button-text">Учить</span>
+          </button>
+          <div class="description">
+            Описание...
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="right-column-countainer">
+          <div class="progress-bar">
+          <p>Прогресс изучения</p>
+          <div class="progress">
+            <div class="progress-fill" style="width: 50%;"></div>
+          </div>
+        </div>
+        <div class="cards-count">
+          <div class="unknown-cards red">
+            <p>Стопка Не знаю <span>0</span></p>
+          </div>
+          <div class="known-cards green">
+            <p>Стопка Знаю <span>0</span></p>
+          </div>
+        </div>
+        <button class="add-card-button">
+          <svg class="plus-icon">
+            <use href="./icons/sprite.svg#IconPlus" />
+          </svg>
+          <span class="add-button-text">Добавить новую карточку</span>
+        </button>
+        </div>
+      </div>
+    </main>
+    <!-- main end -->
+
+    <!-- fotter start -->
+    <footer class="footer">
+
+    </footer>
+    <!-- footer end -->
+  </div>
+
+
+
+<!-- Скрипт -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+    const helpPage = "./help/.htm"; 
+</script>
+<script src="help.js"></script>
+<script>
+  function updateMainMargin() {
+    const header = document.querySelector('.header');
+    const main = document.querySelector('.main');
+    main.style.marginTop = `${header.offsetHeight}px`;
+  }
+
+  window.onload = updateMainMargin;
+  window.addEventListener('resize', updateMainMargin);
+</script>
+</body>
+</html>
 
 
 <!-- <div class="container-fluid p-0">
@@ -69,5 +149,4 @@
     const helpPage = "./help/.htm"; 
 </script>
 <!-- <script src="help.js"></script> -->
-</body>
-</html>
+
