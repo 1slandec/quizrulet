@@ -89,3 +89,46 @@
   white-space: normal;
   color: white;
 }
+
+.step-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.steps {
+    color: white;
+}
+
+.step-title {
+  font-size: 16px;
+  
+}
+
+.step-content{
+    display: none;
+
+}
+
+.step-content.active {
+    display: block;
+    
+}
+
+.step.active .step-number {
+    background-color: #5ee152;
+}
+
+#preview {
+    border: 1px solid grey;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+
+}
