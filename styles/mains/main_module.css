@@ -221,6 +221,7 @@ body {
     margin: 0;
     border-radius: 5px;
     background-color: #333;
+    color: white;
 }
 
 .card-item {
@@ -228,6 +229,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 0.5rem;
+    color: white;
 }
 
 .card-index {
@@ -239,7 +241,7 @@ body {
     display: flex;
     width: 100%;
     gap: 0.5rem;
-    
+    color: white;
 }
 
 .card-term,
