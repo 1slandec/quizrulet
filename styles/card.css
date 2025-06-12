@@ -28,6 +28,7 @@
 
 .svg-button {
     background-color: white;
+    
     border-radius: 50%;
 }
 
@@ -72,4 +73,15 @@
 
 .button-grey {
     cursor: pointer;
+}
+
+.btn-back {
+    width: fit-content;
+    position: absolute;
+    left: 0%;
+    height: 4rem;
+    border-radius: 10px;
+    background-color: #716F6F;
+    border: 0px;
+    color: white;
 }
