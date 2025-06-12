@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Просмотр модуля - QuizRuLet</title>
+    <title>Редактирование модуля - QuizRuLet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/styles.css">
@@ -18,7 +18,7 @@
         <div class="row">
             <nav id="sidebarMenu" class="d-md-flex flex-column col-lg-2 sidebar collapse"> <!--левый блок1-->
                 <div class="position-sticky ">
-                    <a class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3" href="/">
+                    <a class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3">
                         <span class="text-success">Quiz</span><span class="text-secondary">RuLet</span>
                     </a>
                     <div class="sidebarList">
@@ -70,9 +70,10 @@
                 <div class="top-bar d-flex justify-content-between align-items-center flex-wrap"> <!--верхний блок-->
 
 
-                    <div class="module-name" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Это описание учебного модуля. Здесь может быть несколько строк текста. Например, вы можете указать темы, которые он охватывает, уровень сложности, количество карточек и другую полезную информацию.">
+                    <div class="module-name " data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Это описание учебного модуля. Здесь может быть несколько строк текста. Например, вы можете указать темы, которые он охватывает, уровень сложности, количество карточек и другую полезную информацию." >
                         Название учебного модуля
+                        <i class="fa-solid fa-pen ms-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                     </div>
 
                     <div class="buttons gx-4">
@@ -157,14 +158,16 @@
                 <div class="step-content p-4" data-step="2">
                     <h4>Шаг 2: Выбрать разделитель</h4>
                     <p>Выберите, как вы хотите разделить термин и значение:</p>
-                    <input list="separators_inline" class= "form-control" id="separator_inline" name="separator_inline" placeholder="Введите или выберите разделитель">
+                    <input list="separators_inline" class="form-control" id="separator_inline" name="separator_inline"
+                        placeholder="Введите или выберите разделитель">
 
                     <datalist id="separators_inline">
                         <option value=",">Запятая</option>
                         <option value="\t">Таб</option>
                     </datalist>
 
-                    <input list="separators_line" class= "form-control mt-3" id="separator_line" name="separator_line" placeholder="Введите или выберите разделитель">
+                    <input list="separators_line" class="form-control mt-3" id="separator_line" name="separator_line"
+                        placeholder="Введите или выберите разделитель">
 
                     <datalist id="separators_line">
                         <option value="\n">Новая строка</option>
@@ -211,7 +214,7 @@
                     <textarea class="form-control" rows="5" placeholder="Ваш текст..."></textarea>
                 </div>
 
-                
+
 
                 <div class="step-content p-4" data-step="2">
                     <h4>Шаг 2: Предпросмотр</h4>
@@ -225,6 +228,36 @@
             </div>
         </div>
     </div>
+
+    <!-- Модальное окно для редактирования названия и описания модуля -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModuleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModuleModalLabel">Редактирование модуля</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="moduleForm">
+                        <div class="mb-3">
+                            <label for="moduleName" class="form-label">Название модуля</label>
+                            <input type="text" class="form-control" id="moduleName" name="name" value="Пример названия">
+                        </div>
+                        <div class="mb-3">
+                            <label for="moduleDescription" class="form-label">Описание модуля</label>
+                            <textarea class="form-control" id="moduleDescription" name="description"
+                                rows="3">Пример описания...</textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-back-modal" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn-next-modal" id="saveModuleBtn">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -232,8 +265,11 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
-    
+
     <script src="./script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/modal.js"></script>
+    <script src="./script/edit_name_module.js"></script>    
 </body>
 
 </html>

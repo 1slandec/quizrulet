@@ -269,3 +269,33 @@ main {
 .form-control::placeholder {
   color: var(--bs-border-color);
 }
+
+.btn-next-modal {
+    background-color: #5ee152;
+}
+
+.btn-next-modal,
+.btn-back-modal {
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back-modal {
+    background-color: #716F6F;
+}
+
+.btn-back-modal:hover {
+    background-color: darkgrey; /* Темнее оригинального */
+    transform: scale(1.05);
+}
+
+.btn-next-modal:hover {
+    background-color: darkgreen; /* Темнее оригинального */
+    transform: scale(1.05);
+}
+
+#modal-universal {
+  
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}
