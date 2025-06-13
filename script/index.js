@@ -25,37 +25,53 @@ document.addEventListener('DOMContentLoaded', async function (e) {
     //     }
     // }
 
+    async function showListModules() {
 
-    // const token = localStorage.getItem('tasty-cookies');
-    // if (token) {
-    //     const userId = getUserIDFromJWT(token);
-    //     const response = await axios.get(`/users${userId}`);
+        // const token = localStorage.getItem('tasty-cookies');
+        // if (token) {
+        //     const userId = getUserIDFromJWT(token);
+        //     const response = await axios.get(`/users${userId}`);
 
-    // }
+        // }
 
-    // else {
-    //     window.location.href = '/login.html';
-    // }
-    const response = await axios.get('/test-index.json');
-    const cards = response.data.modules;
+        // else {
+        //     window.location.href = '/login.html';
+        // }
 
-    const username = document.querySelector('#username');
-    
-    
-    
-    username.insertAdjacentText('beforeend', response.data.login);
 
-    cards.forEach(element => {
-        showModule(element.name, element.progress);
+        const response = await axios.get('/test-index.json');
+        const cards = response.data.modules;
+
+        const username = document.querySelector('#username');
+
+
+
+        username.insertAdjacentText('beforeend', response.data.login);
+
+        cards.forEach(element => {
+            showModule(element.name, element.progress, element.id);
+        });
+    }
+    const deleteBtn = document.querySelector('#delete-btn');
+
+    document.body.addEventListener('click', async function (e) {
+        if (e.target.closest('.delete-btn')) {
+            e.preventDefault();
+            const card = e.target.closest('.module-card');
+            if (card) {
+                const cardId= card.id;
+                await axios.delete(`/modules/${cardId}`);
+                showListModules();
+            }
+        }
     });
 
-
-    function showModule(name, progress) {
+    function showModule(name, progress, id) {
 
         const container = document.querySelector(".module-list");
 
         const moduleHTML = `
-        <div class="module-card d-flex justify-content-between align-items-center flex-wrap">
+        <div class="module-card d-flex justify-content-between align-items-center flex-wrap id="${id}"">
         <div class="module-title mb-2 mb-md-0">
         <a class="module-name-link" href="module.html">${name}</a>
         </div>
@@ -71,10 +87,10 @@ document.addEventListener('DOMContentLoaded', async function (e) {
             <i class="fas fa-ellipsis-v"></i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#"><i class="fas fa-share-alt me-2"></i> Поделиться</a></li>
+                
                 <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i> Редактировать</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt me-2"></i> Удалить</a></li>
+                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt me-2" id="delete-btn"></i> Удалить</a></li>
                 </ul>
                 </div>
                 </div>
@@ -95,4 +111,5 @@ document.addEventListener('DOMContentLoaded', async function (e) {
         const modal = bootstrap.Modal.getInstance(document.getElementById('createModuleModal'));
         modal.hide();
     })
+    await showListModules();
 });
