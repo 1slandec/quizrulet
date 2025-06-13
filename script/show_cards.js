@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Весь твой код внутри
-    let cards = [];         // Все карточки
+    let cards = [];         // Все карточки         
     let currentIndex = 0;   // Текущая карточка
     let currentCardElement = null;
     const flipButton = document.querySelector('.button-grey');
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция загрузки карточек с сервера
     async function loadCards() {
         try {
-            console.log('1123');
             const response = await axios.get('/test-cards.json');
             cards = response.data.cards || [];
 
@@ -91,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (currentIndex < cards.length) {
                     showCard(cards[currentIndex]);
                 } else {
-                    document.querySelector('.card-container').innerHTML = '<p class="text-center">Вы закончили!</p>';
+                    window.location.href = "/gratz.html"; 
                 }
             } catch (error) {
                 showModal('Ошибка', 'Не удалось сохранить изменения');
@@ -103,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.button-green').addEventListener('click', async () => {
             if (currentIndex >= cards.length) return;
 
-            const currentCard = cards[currentIndex];
+            const currentCard = cards[currentIndex];    
             currentCard.isLearned = true;
             // Отправить
             try {
@@ -113,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (currentIndex < cards.length) {
                     showCard(cards[currentIndex]);
                 } else {
-                    document.querySelector('.card-container').innerHTML = '<p class="text-center">Вы закончили!</p>';
+                    window.location.href = "/gratz.html"; 
                 }
             } catch (error) {
                 showModal('Ошибка', 'Не удалось сохранить изменения');
@@ -136,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (currentIndex > -1) {
                     showCard(cards[currentIndex]);
                 } else {
-                    return;
+                    return; 
                 }
             } catch (error) {
                 showModal('Ошибка', 'Не удалось сохранить изменения');
