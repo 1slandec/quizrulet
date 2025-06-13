@@ -4,193 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Просмотр модуля - QuizRuLet</title>
-    <!-- <link rel="stylesheet" href="./styles/fonts.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/module_edit.css"> -->
+    <link rel="stylesheet" href="./styles/mains/main_module-edit.css">
     <link rel="stylesheet" href="./styles/headers/header_module_edit.css">
-    <link rel="site icon"
-    type="png"
-    href="./images/images.png"
-    >
-    <script src="https://kit.fontawesome.com/419f67953a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="site icon" type="png" href="./images/images.png">
+    <script src="scripts/headers_scripts/header-module-edit-scripts.js"></script>
 </head>
 <body>
     <object type="image/svg+xml" data="./icons/sprite.svg" aria-hidden="true" style="display: none;"></object>
 
-<!-- Header start -->
-<header>
-    <header class="header">
-        <a href="#" class="logo"> 
-            <span class="quiz">Quiz</span><span class="rulet">Rulet</span>
-        </a>
-
-        <div class="central-container">
-            <h1 class="module-title placeholder" id="moduleTitle">
-                Учебный модуль
-            </h1>
-        </div>
-
-        <nav class="nav">
-            <button class="nav-toggle" type="button" aria-label="Меню">
-            <svg>
-                <use href="./icons/sprite.svg#IconBurgerMenu" />
-            </svg>
-            </button>
-
-            <ul class="nav-list">
-
-            <li class="nav-item-learn-and-import">
-                <a href="#">
-                <svg>
-                    <use href="./icons/sprite.svg#IconManualImport" />
-                </svg>
+    <div class="app-container">
+    <!-- header start -->
+        <header class="header">
+            <div class="header-top">
+                <a href="#" class="logo">                                                 <!--/*ДОБАВИТЬ ССЫЛКУ*/ -->
+                    <span class="quiz">Quiz</span><span class="rulet">Rulet</span>
                 </a>
-            </li>
+                <div class="header-container">
+                    <nav class="nav">
+                        <button class="nav-toggle" type="button">
+                            <svg class="icon-menu">
+                                <use href="./icons/sprite.svg#IconBurgerMenu" />
+                            </svg>
+                        </button>
 
-            <li class="nav-item-ai-import">
-                <a href="#">
-                <svg>
-                    <use href="./icons/sprite.svg#IconAIImport" />
-                </svg>
-                </a>
-            </li>
+                        <ul class="nav-list">
 
-            <li class="nav-item-learn-and-import">
-                <a href="#">
-                <svg>
-                    <use href="./icons/sprite.svg#IconLearn" />
-                </svg>
-                </a>
-            </li>
+                        <li class="nav-item-learn-and-import">
+                            <button class="btn-import-ai-manual-learn">
+                                <a href="#">
+                                    <svg class="icon-manual-ai-import-learn">
+                                        <use href="./icons/sprite.svg#IconManualImport" />
+                                    </svg>
+                                </a>
+                                <span class="button-text">Импорт</span>
+                            </button>
+                        </li>
 
-            <li class="nav-item">
-                <a href="#">
-                <svg>
-                    <use href="./icons/sprite.svg#IconMainMenu"/>
-                </svg>
-                </a>
-            </li>
+                        <li class="nav-item-ai-import">
+                            <button class="btn-import-ai-manual-learn">
+                                <a href="#">
+                                    <svg class="icon-manual-ai-import-learn">
+                                        <use href="./icons/sprite.svg#IconAIImport" />
+                                    </svg>
+                                </a>
+                                <span class="button-text">AI-импорт</span>
+                            </button>
+                            
+                        </li>
 
-            </ul>
-        </nav>
-    </header>
-</header>
-<!-- Header end -->
+                        <li class="nav-item-learn-and-import">
+                            <button class="btn-import-ai-manual-learn">
+                                <a href="#">
+                                    <svg class="icon-manual-ai-import-learn">
+                                        <use href="./icons/sprite.svg#IconLearn" />
+                                    </svg>
+                            </a>
+                            <span class="button-text">Учить</span>
+                            </button>
+                        </li>
 
-<!-- Main start -->
-<!-- <main>
-<div class="container-fluid">
-    <div class="row">
-        <nav id="sidebarMenu" class="d-md-flex flex-column col-lg-2 sidebar collapse">  левый блок1 -->
-            <!-- <div class="position-sticky ">
-                <a class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3" href="/">
-                    <span class="text-success">Quiz</span><span class="text-secondary">RuLet</span>
-                </a>
-                <div class="sidebarList"> -->
+                        <li class="nav-item">
+                            <a href="#">
+                            <svg>
+                                <use href="./icons/sprite.svg#IconMainMenu"/>
+                            </svg>
+                            </a>
+                        </li>
 
-                    <!-- <ul class="nav flex-column">
-                        <li class="card m-2">
-                            <div class="card-body">
-                                123123
-                            </div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        <li class="card m-2 ">
-                            <div class="card-body"></div>
-                        </li>
-                        
-                    </ul>
+                        </ul>
+                    </nav>
+                    
+                    <!-- Поиск - НАЧАЛО-->
+                    <div class="search">
+                        <button class="search-toggle" type="button">
+                            <svg class="icon-search">
+                                <use href="./icons/sprite.svg#IconSearch" />
+                            </svg>
+                        </button>
+                        <form action="" class="search-form">
+                            <label for="search"></label>
+                            <input type="search" id="search" placeholder="Искать..." autocomplete="off">
+                        </form>
+                    </div>
+                    <!-- Поиск - КОНЕЦ -->
                 </div>
-            </div>
-
-            <div class="help mt-auto">
-                <a class="nav-link" href="./help/sozdanie_novogo_uchebnogo_modulya.htm">
-                    <i class="fas fa-question me-2"></i> Помощь
-                </a>
+                
             </div>
             
-        </nav> -->
-
-        <!-- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 min-vh-100"> <!--правый блок-->
-            <!-- <div class="top-bar d-flex justify-content-between align-items-center flex-wrap"> <!--верхний блок-->
-                
-                
-                <!-- <div class="module-name" data-bs-toggle="tooltip" data-bs-placement="top" title="Это описание учебного модуля. Здесь может быть несколько строк текста. Например, вы можете указать темы, которые он охватывает, уровень сложности, количество карточек и другую полезную информацию.">
-                    Название учебного модуля
-                </div> 
-                    
-                <div class="buttons gx-4"> -->
-                    <!-- <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ -->
-                        <!-- <svg class = "me-2" width="30" height="30" viewBox="0 0 41 37" fill="none" >
-                            <use href="./icons/sprite.svg#HandImport" />
-                        </svg> -->
-
-
-                        <!-- Импорт    
-                    </a>
-                    <a class="btn btn-import d-inline-flex align-items-center justify-content-between p" href="#" > ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ -->
-                        <!-- <svg class = "me-2" width="30" height="30" viewBox="0 0 45 37" fill="none">
-                            <use href="./icons/sprite.svg#AIImport" />
+            <!-- Вторая строка: Название модуля по центру -->
+            <div class="module-title-container">
+                <h1 class="module-title placeholder" id="moduleTitle">Учебный модуль</h1>
+                <div class="button-container">
+                    <button class="edit-button">
+                    <a href="#">                                        <!--/*ДОБАВИТЬ ССЫЛКУ*/ -->
+                        <svg>
+                            <use href="./icons/sprite.svg#IconModuleEdit" />
                         </svg>
-
-                        AI-импорт    
-                    </a>
-                    <a class="btn btn-learn d-inline-flex align-items-center justify-content-between" href="#" > <!--ДОБАВИТЬ ССЫЛКИ НА СТРАНИЦЫ-->
-                        <!-- <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none">
-                            <use href="./icons/sprite.svg#IconLearn" />
+                        </a>
+                    </button></div>
+                    <button class="card-plus">
+                    <a href="#">                                        <!--/*ДОБАВИТЬ ССЫЛКУ*/ -->
+                        <svg class="icon-menu">
+                            <use href="./icons/sprite.svg#IconCardPlus" />
                         </svg>
-                        Учить  -->
-                    <!-- </a>
-                </div>
+                        </a>
+                    </button>
+                </div>                                     
             </div>
 
-            <div class="card-show pt-3 pb-2 mb-3 gx-4 row min-vh-100"> <!--нижний блок-->
-                <!-- <div class = "card-termin col-6 pr-2 pe-md-3">
-                    <textarea class = "card-txt" rows = 10 type = "form-control" placeholder="Введите термин"></textarea>
-                </div>
-                <div class = "card-meaning col-6 pl-2 ps-md-3">
-                    <textarea class = "card-txt" rows = 10 type = "form-control" placeholder="Введите значение"></textarea>
+        </header>
+        <!-- header end -->
+
+    <!-- Main start -->
+    <main class="main">
+        <div class="main-container">
+            <div class="side-bar-menu">
+                <ul class="cards">
+                    <li class="card" style="width: 140px;">
+                        <span class="card-content">Контент</span>
+                        <button class="rubish-bin"><svg class="icon-rubbish"><use href="./icons/sprite.svg#IconRubbishBin" /></svg></button>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li class="card" style="width: 140px;">
+                        <span class="card-content">Контент</span>
+                        <button class="rubish-bin"><svg class="icon-rubbish"><use href="./icons/sprite.svg#IconRubbishBin" /></svg></button>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li class="card" style="width: 140px;">
+                        <span class="card-content">Контент</span>
+                        <button class="rubish-bin"><svg class="icon-rubbish"><use href="./icons/sprite.svg#IconRubbishBin" /></svg></button>
+                    </li>
+                </ul>
+                <ul class="cards">
+                    <li class="card" style="width: 140px;">
+                        <span class="card-content">Контент</span>
+                        <button class="rubish-bin"><svg class="icon-rubbish"><use href="./icons/sprite.svg#IconRubbishBin" /></svg></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right-part-main">
+                <div class="value-termin-part">
+                    <textarea class="card-term autoresize" placeholder="Термин"></textarea>
+                    <textarea class="card-value autoresize" placeholder="Значение"></textarea>
                 </div>
             </div>
-        </main>
-    </div>
-</div>
-</main> --> 
-<!-- Main end -->
+        </div>
+    </main> 
+    <!-- Main end -->
 
 <!-- Footer start -->
-<footer>
-
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-text">© 2025-QuizRulet</p>
+    <button class="support-button" href="#">Помощь</button>            <!--/*ДОБАВИТЬ ССЫЛКУ*/ -->
+  </div>
 </footer>
 <!-- Footer end -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-</script>
 <script>
   function updateMainMargin() {
     const header = document.querySelector('.header');
@@ -201,5 +175,7 @@
   window.onload = updateMainMargin;
   window.addEventListener('resize', updateMainMargin);
 </script>
+
+
 </body>
 </html>
